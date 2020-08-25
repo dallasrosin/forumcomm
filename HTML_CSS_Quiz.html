@@ -1,0 +1,110 @@
+<html>
+<style>
+h1 {margin-top:0px;}
+.grid-container
+	{
+  	display: grid;
+  	grid-gap: 10px;
+  	padding: 10px;
+	grid-template-columns: 28%; auto 40px;
+	}
+
+.grid-item
+	{
+  	padding: 20px;
+  	font-size: 18px;
+	}
+.grid-item img{width:100%;padding-top:40px;padding-bottom:40px;}
+.column1{grid-column:1;text-align:right;}
+.column2{grid-column:2;}
+.column3{grid-column:3;}
+.first-paragraph {grid-row:1;}
+
+
+@media (max-width: 910px)
+	{
+	.column1, .column2, .column3 {grid-column:1;max-width:100%;text-align:left;}
+	.first-paragraph {grid-row:3;}
+	.grid-container {grid-template-columns: auto;}
+	.link{padding-top:0px;padding-bottom:0px;}
+	.social-icons{padding-top:0px;padding-bottom:0px;}
+	}
+
+.date
+	{
+	text-transform: uppercase;
+	font-weight:lighter;
+	color:#444;
+	}
+
+.social-icons div
+	{
+	display:inline-block;
+	width:20px;
+	height:20px;
+	}
+
+#footer
+	{
+	background-color:#000;
+	color:#FFF;
+	text-align:center;
+	padding:20px;
+	margin-top:20px;
+	}
+</style>
+
+<body>
+<div class=grid-container>
+	<div class="grid-item column1">
+		<h1>Page Heading Page Heading Page Heading </h1>
+		<div class=date>August 24, 2020</div>
+	</div>
+
+	<div class="grid-item social-icons column3"><!-- these would be images, preferable svgs -->
+		<div>F</div>
+		<div>T</div>
+		<div>L</div>
+		<div>N</div>
+	</div>
+
+	<div class="grid-item column2 first-paragraph">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque tempor tempus. Suspendisse potenti. Vestibulum vehicula consectetur nibh nec lobortis. Etiam ultrices ultrices odio in tempus. Nunc placerat risus sit amet dui tristique luctus. Cras imperdiet, nisi vel egestas viverra, velit enim ultrices quam, vitae ullamcorper leo erat a elit. Duis pellentesque at lectus mollis sodales. Integer tristique nunc fermentum neque tincidunt, a tristique urna volutpat. Pellentesque feugiat odio sed dignissim tempor. Etiam gravida eget eros aliquet tincidunt. Nulla rutrum blandit egestas. Maecenas at libero leo. Etiam velit urna, accumsan et suscipit vitae, dapibus et erat. Proin rutrum imperdiet dictum.
+
+		<h2>Subheading 1 Subheading 1 Subheading 1 Subheading 1 </h2>
+
+		Pellentesque aliquam justo cursus tellus faucibus, quis volutpat libero lacinia. Duis vel sagittis augue. Quisque vestibulum ornare mi, ut efficitur purus blandit vitae. Aenean in accumsan ipsum. Aliquam finibus rutrum turpis, in dignissim ante. Mauris sodales consectetur pharetra. In in suscipit dui. Sed suscipit eget quam vitae maximus. Aenean quis enim tincidunt, malesuada lectus sit amet, posuere tellus. Nunc posuere dui orci, nec euismod ex rutrum id. Nam fermentum sed dui at sollicitudin. Donec iaculis risus quis magna tristique pulvinar. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris volutpat sem nisl, a luctus magna dictum id. Nunc eget dictum magna. Donec sit amet quam justo.
+
+		<BR><BR>Nam quis nunc efficitur, auctor libero vel, dapibus orci. Duis pharetra pretium augue nec venenatis. Vestibulum nec quam sed lectus molestie aliquet. Phasellus nec molestie metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin pellentesque ligula ex, id iaculis nibh convallis vel. Mauris venenatis dolor vitae maximus ullamcorper. Pellentesque vel euismod quam. Nam auctor sem nulla, ac aliquet risus posuere eget. Cras velit ex, venenatis nec sollicitudin non, mattis quis enim.
+	</div>
+
+	<div class="grid-item column1 link">
+		<a href=./>Link 1</a>
+	</div>
+
+	<div class="grid-item column2">
+		Sed a porta arcu. In rutrum sapien nec metus rhoncus consequat. Quisque augue justo, tincidunt non sapien id, dictum aliquet sapien. Etiam eget dignissim metus. In eget justo ex. Vivamus a libero tellus. Nunc at lacus ut leo tincidunt eleifend quis vel metus. Sed sed blandit ante. Curabitur rhoncus accumsan augue, at iaculis ante posuere id. Maecenas vitae interdum orci. Duis non sapien mi. Suspendisse eleifend commodo purus, at rutrum nulla accumsan id. Sed quis augue ac metus ornare lobortis. Morbi nulla felis, convallis et facilisis in, suscipit ac magna. Aenean pellentesque finibus condimentum. Nullam scelerisque neque at fermentum ullamcorper.
+
+		<BR><BR><img src=./tmp_pic_679i.png>
+
+		<h2>Subheading 2 Subheading 2 Subheading 2 Subheading 2 </h2>
+		
+		Donec egestas lorem ac lorem rhoncus, ut dignissim diam suscipit. Phasellus purus lectus, porta ultricies arcu a, pretium efficitur leo. Suspendisse sit amet auctor lorem. Suspendisse potenti. Donec sit amet lorem non augue tempor convallis. Morbi justo ligula, pretium eget est eu, aliquam dictum elit. Phasellus vel commodo turpis, ac fringilla arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque faucibus aliquam sem, a sagittis sapien laoreet nec. Etiam et sagittis erat. Nullam orci quam, pellentesque at sollicitudin sit amet, tempus id ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+	</div>
+
+	<div class="grid-item column1 link">
+		<a href=./>Link 2</a>
+	</div>
+
+	<div class="grid-item column2">
+		Cras facilisis malesuada urna nec ultricies. In faucibus orci vitae nisl euismod tristique. Integer malesuada at lectus eget tincidunt. Nunc vitae neque risus. Sed id mauris eu tellus elementum semper. Morbi efficitur sapien sed est tristique mollis vitae nec justo. Nunc non elit vel ex dictum finibus.
+
+		<BR><BR>Phasellus sed imperdiet augue. Pellentesque a ultricies nibh. Nam vitae volutpat velit. Sed ut libero quis nisl egestas molestie ornare eget tortor. Maecenas vulputate quam est, id dignissim elit aliquet at. Nulla dignissim orci purus, vel placerat velit euismod a. In finibus iaculis nibh quis condimentum. Nulla vitae tortor quis quam gravida ullamcorper. Curabitur eu viverra odio. Vivamus et semper velit. Suspendisse elementum justo tellus, nec lobortis augue eleifend quis. Cras tristique in quam a ultrices.
+	</div>
+</div>
+<div id=footer>
+	Footer Line 1 Footer Line 1 Footer Line 1 Footer Line 1 Footer Line 1 <BR>
+	Footer Line 2 Footer Line 2 Footer Line 2 Footer Line 2 
+</div>
+</body>
+</html>
