@@ -22,7 +22,6 @@ function contractMH(x) {x.style.maxHeight = RMHeight;} //
 
 //Get JSON headlines
 $.getJSON("worldnews.json", function(worldnewsdata){
-    console.log(worldnewsdata);
 	var tmptext = '<hr>';
 
 //Style a little, but mostly allow for matched local styling.
@@ -45,14 +44,18 @@ $.getJSON("worldnews.json", function(worldnewsdata){
 
 //A Loop for the 5 headlines and links.
 	for (i = 0; i < 5; i++) {
-		tmptext += '<a href=//www.reddit.com' + worldnewsdata.data.children[i].data.permalink + ' target=_blank style=text-decoration:none;>';
+		tmptext += '<a href=' + worldnewsdata.data.children[i].data.url + ' target=_blank style=text-decoration:none;>';
+
+			tmptext += '<div class=forumcommWorldnewsWidgetURL>';
+				tmptext += worldnewsdata.data.children[i].data.domain;
+			tmptext += '</div>';
 
 			tmptext += '<h3 class=forumcommWorldnewsWidgetTitle onmouseover="expandMH(this)" onmouseout="contractMH(this)">';
 				tmptext += worldnewsdata.data.children[i].data.title;
 			tmptext += '</h3>';
 
 			tmptext += '<div class=forumcommWorldnewsWidgetURL>';
-				tmptext += 'reddit.com' + worldnewsdata.data.children[i].data.permalink;
+				tmptext += worldnewsdata.data.children[i].data.url;
 			tmptext += '</div>';
 
 		tmptext += '</a>';
@@ -60,7 +63,7 @@ $.getJSON("worldnews.json", function(worldnewsdata){
 		tmptext += '<hr>';
 	}
 
-//Request the DOM to put the content in the div.
+//Request the DOM to put the content in the box.
 	document.getElementById('forumcommWorldnewsWidget').innerHTML += tmptext;
 });
  
